@@ -9,7 +9,8 @@ package com.cavila.kidsworldanimals;
 
 public final class R {
     public static final class array {
-        public static final int cat=0x7f040000;
+        public static final int animal1=0x7f040000;
+        public static final int cat=0x7f040001;
     }
     public static final class attr {
     }

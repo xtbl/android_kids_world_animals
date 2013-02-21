@@ -32,8 +32,15 @@ private EditText textboxSpell;
         //{
         	Log.e("animal selected was: ", Integer.toString(bundle.getInt("animal_selected")));
         	//Log.e("animal selected was: ", bundle.getString("animal_selected"));
+        	//R.array.animal1;
+        	
         //}
-		
+        	//String currentAnimal = getResources().getIdentifier("animal1", "array","com.cavila.kidsworldanimals");
+        	//Log.e("array resource is ", Integer.toString(bundle.getInt("animal_selected")));
+        	Toast.makeText(Play.this, getResources().getIdentifier("app_name", "string", 
+        			getPackageName()), Toast.LENGTH_LONG).show();
+        	
+        	
 		//Initialize the tts object
 		tts = new TextToSpeech(this, this);
 		//Refer 'Speak' button
