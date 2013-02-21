@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cat">
+        <item name="first_letter">c</item>
+        <item name="name">cat</item>
+        <item name="age">Average age: 15</item>
+        <item name="food">They eat fish</item>
+        <item name="domestic">Domestic</item>
+        <item name="origin">Egypt</item>
+        <item name="sleep">15 hours of sleep per day</item>
+    </string-array>
+</resources>

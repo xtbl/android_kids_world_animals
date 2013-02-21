@@ -25,6 +25,15 @@ private EditText textboxSpell;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.play);
 		
+		// retrieve animal selected
+        Bundle bundle = getIntent().getExtras();
+
+        //if(bundle.getInt("animal_selected")!= null)
+        //{
+        	Log.e("animal selected was: ", Integer.toString(bundle.getInt("animal_selected")));
+        	//Log.e("animal selected was: ", bundle.getString("animal_selected"));
+        //}
+		
 		//Initialize the tts object
 		tts = new TextToSpeech(this, this);
 		//Refer 'Speak' button
@@ -35,8 +44,7 @@ private EditText textboxSpell;
 		btnSpell.setOnClickListener(new View.OnClickListener() {
 		
 		public void onClick(View arg0) {
-		         //Method yet to be defined 
-		         speakOut();
+			speakOut();
 		}
 
 });		
@@ -44,25 +52,24 @@ private EditText textboxSpell;
 	}
 	
 	
-	// TextToSpeech related methods
+	// TextToSpeech related methods based on http://android.programmerguru.com/android-text-to-speech-example/
 	public void onInit(int status) {
-        // TODO Auto-generated method stub
-          //TTS is successfully initialized
+        //TTS is successfully initialized
         if (status == TextToSpeech.SUCCESS) {
                        //Setting speech language
             int result = tts.setLanguage(Locale.US);
            //If your device doesn't support language you set above
             if (result == TextToSpeech.LANG_MISSING_DATA
                     || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                           //Cook simple toast message with message
+            	//Cook simple toast message with message
                 Toast.makeText(this, "Language not supported", Toast.LENGTH_LONG).show();
                 Log.e("TTS", "Language is not supported");
             } 
-                 //Enable the button - It was disabled in play.xml (Go back and Check it)
+         //Enable the button - It was disabled in play.xml (Go back and Check it)
                         else {
                         	btnSpell.setEnabled(true);
             }
-            //TTS is not initialized properly
+         //TTS is not initialized properly
         } else {
                     Toast.makeText(this, "TTS Initilization Failed", Toast.LENGTH_LONG).show();
             Log.e("TTS", "Initilization Failed");
@@ -71,11 +78,15 @@ private EditText textboxSpell;
 
 	private void speakOut() {
        //Get the text typed
-       String text = textboxSpell.getText().toString();
-        //If no text is typed, tts will read out 'You haven't typed text'
-        //else it reads out the text you typed
+       String tmptext = textboxSpell.getText().toString();
+       String text = "";
+       //divide characters to spell
+       for (int i = 0;i < tmptext.length(); i++){
+    	    text += tmptext.charAt(i) + " ";
+    	}
+       
        if (text.length() == 0) {
-           tts.speak("You haven't typed text", TextToSpeech.QUEUE_FLUSH, null);
+           tts.speak("Hey, please type an animal name", TextToSpeech.QUEUE_FLUSH, null);
        } else {
            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
        }
@@ -83,7 +94,6 @@ private EditText textboxSpell;
 	}
 	
 	public void onDestroy() {
-        // Don't forget to shutdown!
         if (tts != null) {
             tts.stop();
             tts.shutdown();
