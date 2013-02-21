@@ -11,14 +11,13 @@
         android:text="Animal sound" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSpell"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="spellAnimal"
         android:text="How do I spell it?" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/textboxSpell"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" >
