@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_txt_size">25sp</dimen>
+    <dimen name="list_txt_margin_top">10dp</dimen>
+    <dimen name="list_txt_margin_left">5dp</dimen>
+    <dimen name="txt_size_std">20dp</dimen>
+    <dimen name="txt_size_big">30dp</dimen>
+    <dimen name="list_img_size">80dp</dimen>
+</resources>

@@ -21,7 +21,8 @@ public class Play extends Activity implements OnInitListener {
 private TextToSpeech tts;
 private Button btnSpell;
 private EditText textboxSpell;
-private Button btnDialog;	
+private Button btnDialog;
+private Button btnLearnMore;	
 final Context context = this;
 public String currentAnimal = "cat";
 private String animalNameAnswer = "";
@@ -109,6 +110,17 @@ private String animalNameAnswer = "";
 			dialog.show();
 		  }
 		});
+    	
+    	// Learn More
+    	btnLearnMore = (Button) findViewById(R.id.btnLearnMore);
+    	// start Learn More activity
+    	btnLearnMore.setOnClickListener(new View.OnClickListener() {
+    		@Override
+    		public void onClick(View v) {
+    			startActivity(new Intent(Play.this, AnimalInfo.class));
+    		}
+    	});
+    	
 		
 	}
 	
@@ -171,5 +183,6 @@ private String animalNameAnswer = "";
         super.onDestroy();
     }	
 	
+
 
 }

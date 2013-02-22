@@ -24,6 +24,8 @@
         </activity>
         <activity 
             android:name=".Play"></activity>
+        <activity 
+            android:name=".AnimalInfo"></activity>
     </application>
 
 </manifest>
