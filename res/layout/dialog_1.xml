@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal" >
+
+     <TextView
+         android:id="@+id/textDialog"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="false"
+         android:layout_alignParentTop="false"
+         android:layout_marginTop="18dp"
+         android:gravity="center"
+         android:text="Congratulations!"
+         android:textColor="#000" />
+
+     <Button
+         android:id="@+id/btnDialogOk"
+         android:layout_width="100px"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/textDialog"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="24dp"
+         android:text=" Ok " />
+ 
+</RelativeLayout>

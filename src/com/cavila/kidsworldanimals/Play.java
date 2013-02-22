@@ -3,6 +3,8 @@ package com.cavila.kidsworldanimals;
 import java.util.Locale;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -11,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Play extends Activity implements OnInitListener {
@@ -18,13 +21,16 @@ public class Play extends Activity implements OnInitListener {
 private TextToSpeech tts;
 private Button btnSpell;
 private EditText textboxSpell;
-	
+private Button btnDialog;	
+final Context context = this;
+public String currentAnimal = "cat";
+private String animalNameAnswer = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.play);
-		
+
 		// retrieve animal selected
         Bundle bundle = getIntent().getExtras();
 
@@ -39,6 +45,9 @@ private EditText textboxSpell;
         	//Log.e("array resource is ", Integer.toString(bundle.getInt("animal_selected")));
         	Toast.makeText(Play.this, getResources().getIdentifier("app_name", "string", 
         			getPackageName()), Toast.LENGTH_LONG).show();
+
+
+        	 
         	
         	
 		//Initialize the tts object
@@ -50,14 +59,68 @@ private EditText textboxSpell;
 		//Handle onClick event for button 'Speak'
 		btnSpell.setOnClickListener(new View.OnClickListener() {
 		
-		public void onClick(View arg0) {
-			speakOut();
-		}
+				public void onClick(View arg0) {
+					speakOut();
+				}
+		
+		});		
+		
+    	// dialog button
+    	btnDialog = (Button) findViewById(R.id.btnDialog);
+    	// add dialog button listener
+    	btnDialog.setOnClickListener(new View.OnClickListener() {
+		  public void onClick(View arg0) {
 
-});		
+			// custom dialog
+			final Dialog dialog = new Dialog(context);
+			dialog.setContentView(R.layout.dialog_1);
+			dialog.setTitle("Your score");
+
+			TextView text = (TextView) dialog.findViewById(R.id.textDialog);
+			
+			//check there is an answer and if that answer is right
+			animalNameAnswer = textboxSpell.getText().toString();
+			if (animalNameAnswer != null && animalNameAnswer.length() != 0){
+				
+				if( answerIsCorrect(currentAnimal, animalNameAnswer) ){
+					text.setText("Congratulations!");
+				}else{
+					text.setText("Please try again");
+				}
+			}else{
+				text.setText("Hey, you need to write the animal name");
+			}
+				
+			
+
+			
+			//			ImageView image = (ImageView) dialog.findViewById(R.id.image);
+//			image.setImageResource(R.drawable.ic_launcher);
+
+			Button dialogButton = (Button) dialog.findViewById(R.id.btnDialogOk);
+			// if button is clicked, close the custom dialog
+			dialogButton.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					dialog.dismiss();
+				}
+			});
+
+			dialog.show();
+		  }
+		});
 		
 	}
 	
+	// check if answer is correct
+	public boolean answerIsCorrect (String animal, String userAnswer){
+		if (animal.equalsIgnoreCase(userAnswer)){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
 	
 	// TextToSpeech related methods based on http://android.programmerguru.com/android-text-to-speech-example/
 	public void onInit(int status) {

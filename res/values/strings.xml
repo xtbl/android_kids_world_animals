@@ -4,5 +4,6 @@
     <string name="app_name">KidsWorldAnimals</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="write_hint">type the letters here</string>
 
 </resources>

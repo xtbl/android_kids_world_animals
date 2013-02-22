@@ -20,13 +20,14 @@
         android:id="@+id/textboxSpell"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:ems="10"
+        android:hint="@string/write_hint" >
 
         <requestFocus />
     </EditText>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Get my score!" />
