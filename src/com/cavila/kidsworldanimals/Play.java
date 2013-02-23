@@ -47,10 +47,19 @@ private String animalNameAnswer = "";
         
       //ANIMAL SELECT WITH STRING	
         Log.e("animal selected was: ", bundle.getString("animal_selected"));
+        currentAnimal = bundle.getString("animal_selected");
         
         Resources res = getResources(); 
-        String[] animArray = res.getStringArray(R.array.animal1);
-        Log.e("NAME", animArray[0]);
+        
+        //CREATE METHOD getAnimalInfo(String animal1) returns array to local var
+        //CREATE METHOD getAnimalName(String animal1) returns string
+        //CREATE METHOD getAnimalVideo(String animal1) returns resource id
+        
+        
+        int idResource = getResources().getIdentifier(currentAnimal, "array", getPackageName());
+        String[] animArray = res.getStringArray(idResource);
+        Log.e("1st LETTER", animArray[0]);
+        Log.e("NAME", animArray[1]);
         
         // get resources according to selection  
         	//get animal name
