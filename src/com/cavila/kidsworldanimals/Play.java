@@ -21,55 +21,33 @@ import android.widget.VideoView;
 
 public class Play extends Activity implements OnInitListener {
 
-private TextToSpeech tts;
-private Button btnSpell;
-private EditText textboxSpell;
-private Button btnDialog;
-private Button btnLearnMore;
-private Button btnVideo;
-VideoView vid;
-final Context context = this;
-public String currentAnimal = "cat";
-private String animalNameAnswer = "";
+	private TextToSpeech tts;
+	private Button btnSpell;
+	private EditText textboxSpell;
+	private Button btnDialog;
+	private Button btnLearnMore;
+	private Button btnVideo;
+	VideoView vid;
+	final Context context = this;
+	private String currentAnimal = "";
+	private String animalNameAnswer = "";
+	private String[] animArray;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.play);
 
-		// retrieve animal selected
+		/**
+		 *  get animal selected from previous activity
+		 */
         Bundle bundle = getIntent().getExtras();
+        currentAnimal = bundle.getString("animal_selected");        
+        getAnimalInfo(currentAnimal);
+        Log.e("ANIMAL_NAME", getAnimalName());
 
-        //if(bundle.getInt("animal_selected")!= null)
-        //{
-      //ANIMAL SELECT WITH INTEGER	
-        //Log.e("animal selected was: ", Integer.toString(bundle.getInt("animal_selected")));
-        
-      //ANIMAL SELECT WITH STRING	
-        Log.e("animal selected was: ", bundle.getString("animal_selected"));
-        currentAnimal = bundle.getString("animal_selected");
-        
-        Resources res = getResources(); 
-        
-        //CREATE METHOD getAnimalInfo(String animal1) returns array to local var
-        //CREATE METHOD getAnimalName(String animal1) returns string
-        //CREATE METHOD getAnimalVideo(String animal1) returns resource id
-        
-        
-        int idResource = getResources().getIdentifier(currentAnimal, "array", getPackageName());
-        String[] animArray = res.getStringArray(idResource);
-        Log.e("1st LETTER", animArray[0]);
-        Log.e("NAME", animArray[1]);
-        
-        // get resources according to selection  
-        	//get animal name
-        
-        	//Log.e("animal selected was: ", bundle.getString("animal_selected"));
-        	//R.array.animal1;
-        	
-        //}
-        	//String currentAnimal = getResources().getIdentifier("animal1", "array","com.cavila.kidsworldanimals");
-        	//Log.e("array resource is ", Integer.toString(bundle.getInt("animal_selected")));
+
 // GET RESOURCES TEST        	
 //        	Toast.makeText(Play.this, getResources().getIdentifier("app_name", "string", 
 //        			getPackageName()), Toast.LENGTH_LONG).show();
@@ -78,7 +56,7 @@ private String animalNameAnswer = "";
 	 * video setup
 	 */
         vid = (VideoView) findViewById(R.id.videoView1);
-        String uripath = "android.resource://" + getPackageName() + "/" + R.raw.bunny_video;
+        String uripath = "android.resource://" + getPackageName() + "/" + getVideoResId(currentAnimal);
         vid.setVideoURI(Uri.parse(uripath));
     	btnVideo = (Button) findViewById(R.id.btnVideo);
     	btnVideo.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +77,7 @@ private String animalNameAnswer = "";
 		});		
 		
 	/**
-	 *  dialog button
+	 *  get my score and dialog button
 	 */
     	btnDialog = (Button) findViewById(R.id.btnDialog);
     	// add dialog button listener
@@ -117,7 +95,7 @@ private String animalNameAnswer = "";
 			animalNameAnswer = textboxSpell.getText().toString();
 			if (animalNameAnswer != null && animalNameAnswer.length() != 0){
 				
-				if( answerIsCorrect(currentAnimal, animalNameAnswer) ){
+				if( answerIsCorrect(getAnimalName(), animalNameAnswer) ){
 					text.setText("Congratulations!");
 				}else{
 					text.setText("Please try again");
@@ -151,13 +129,42 @@ private String animalNameAnswer = "";
     	btnLearnMore.setOnClickListener(new View.OnClickListener() {
     		@Override
     		public void onClick(View v) {
-    			startActivity(new Intent(Play.this, AnimalInfo.class));
+    	    	Intent i = new Intent(Play.this, AnimalInfo.class);
+    	    	i.putExtra("animal_info", currentAnimal);
+    	    	startActivity(i);
     		}
     	});
     	
 		
 	}
+
+    /**
+     * get id for an specific Video resource using the name as parameter
+     */
+    public int getVideoResId(String resName){
+    	int resId;
+    	resId = getResources().getIdentifier(resName, "raw", getPackageName());
+    	return resId;
+    }	
 	
+    /**
+     * get current animal selection and sets an array with animal info
+     */
+    public void getAnimalInfo(String selectedAnimal){
+        Resources res = getResources(); 
+        int idResource = getResources().getIdentifier(currentAnimal, "array", getPackageName());
+        animArray = res.getStringArray(idResource);
+        Log.e("1st LETTER", animArray[0]);
+    }
+    /**
+     * get current animal name
+     */
+    public String getAnimalName(){
+    	String name = "";
+    	name = animArray[1];
+    	return name;
+    }
+    
 	// check if answer is correct
 	public boolean answerIsCorrect (String animal, String userAnswer){
 		if (animal.equalsIgnoreCase(userAnswer)){
@@ -167,6 +174,7 @@ private String animalNameAnswer = "";
 		}
 	}
 	
+    
 	/**
 	 * TextToSpeech related methods based on http://android.programmerguru.com/android-text-to-speech-example/
 	 */
@@ -189,7 +197,8 @@ private String animalNameAnswer = "";
 
 	private void speakOut() {
        //Get the text typed
-       String tmptext = textboxSpell.getText().toString();
+       //String tmptext = textboxSpell.getText().toString();
+	   String tmptext = getAnimalName();
        String text = "";
        //divide characters to spell
        for (int i = 0;i < tmptext.length(); i++){
