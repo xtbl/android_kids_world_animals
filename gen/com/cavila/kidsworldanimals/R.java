@@ -9,47 +9,50 @@ package com.cavila.kidsworldanimals;
 
 public final class R {
     public static final class array {
-        public static final int animal1=0x7f040000;
-        public static final int cat=0x7f040001;
+        public static final int animal1=0x7f050001;
+        public static final int animal2=0x7f050002;
+        public static final int animal_test=0x7f050000;
+        public static final int cat=0x7f050003;
     }
     public static final class attr {
     }
     public static final class color {
-        public static final int bg_color=0x7f070000;
-        public static final int txt_color=0x7f070001;
-        public static final int txt_highlight_color=0x7f070002;
+        public static final int bg_color=0x7f080000;
+        public static final int txt_color=0x7f080001;
+        public static final int txt_highlight_color=0x7f080002;
     }
     public static final class dimen {
-        public static final int list_img_size=0x7f050005;
-        public static final int list_txt_margin_left=0x7f050002;
-        public static final int list_txt_margin_top=0x7f050001;
-        public static final int list_txt_size=0x7f050000;
-        public static final int txt_size_big=0x7f050004;
-        public static final int txt_size_std=0x7f050003;
+        public static final int list_img_size=0x7f060005;
+        public static final int list_txt_margin_left=0x7f060002;
+        public static final int list_txt_margin_top=0x7f060001;
+        public static final int list_txt_size=0x7f060000;
+        public static final int txt_size_big=0x7f060004;
+        public static final int txt_size_std=0x7f060003;
     }
     public static final class drawable {
         public static final int animal_ico=0x7f020000;
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int backImage=0x7f0a0007;
-        public static final int btnDialog=0x7f0a000e;
-        public static final int btnDialogOk=0x7f0a0009;
-        public static final int btnLearnMore=0x7f0a000f;
-        public static final int btnSpell=0x7f0a000c;
-        public static final int button1=0x7f0a000b;
-        public static final int button5=0x7f0a0010;
-        public static final int imageView1=0x7f0a000a;
-        public static final int menu_settings=0x7f0a0011;
-        public static final int radioButton1=0x7f0a0002;
-        public static final int radioButton2=0x7f0a0003;
-        public static final int radioButton3=0x7f0a0004;
-        public static final int radioButton4=0x7f0a0005;
-        public static final int radioButton5=0x7f0a0006;
-        public static final int radioGroup=0x7f0a0001;
-        public static final int textDialog=0x7f0a0008;
-        public static final int textView1=0x7f0a0000;
-        public static final int textboxSpell=0x7f0a000d;
+        public static final int backImage=0x7f0b0007;
+        public static final int btnDialog=0x7f0b000e;
+        public static final int btnDialogOk=0x7f0b0009;
+        public static final int btnLearnMore=0x7f0b000f;
+        public static final int btnSpell=0x7f0b000c;
+        public static final int btnVideo=0x7f0b000b;
+        public static final int button5=0x7f0b0011;
+        public static final int imageView1=0x7f0b000a;
+        public static final int menu_settings=0x7f0b0012;
+        public static final int radioButton1=0x7f0b0002;
+        public static final int radioButton2=0x7f0b0003;
+        public static final int radioButton3=0x7f0b0004;
+        public static final int radioButton4=0x7f0b0005;
+        public static final int radioButton5=0x7f0b0006;
+        public static final int radioGroup=0x7f0b0001;
+        public static final int textDialog=0x7f0b0008;
+        public static final int textView1=0x7f0b0000;
+        public static final int textboxSpell=0x7f0b000d;
+        public static final int videoView1=0x7f0b0010;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -59,13 +62,16 @@ public final class R {
         public static final int play=0x7f030004;
     }
     public static final class menu {
-        public static final int activity_main=0x7f090000;
+        public static final int activity_main=0x7f0a0000;
+    }
+    public static final class raw {
+        public static final int bunny_video=0x7f040000;
     }
     public static final class string {
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060001;
-        public static final int menu_settings=0x7f060002;
-        public static final int write_hint=0x7f060003;
+        public static final int app_name=0x7f070000;
+        public static final int hello_world=0x7f070001;
+        public static final int menu_settings=0x7f070002;
+        public static final int write_hint=0x7f070003;
     }
     public static final class style {
         /** 
@@ -89,10 +95,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080001;
+        public static final int AppTheme=0x7f090001;
     }
 }

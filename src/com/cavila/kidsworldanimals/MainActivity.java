@@ -10,7 +10,7 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-public int animalSelec = 1;
+public String animalSelec = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +32,18 @@ public int animalSelec = 1;
 	    switch(view.getId()) {
 	        case R.id.radioButton1:
 	            if (checked)
-	            	Log.e("radio selected", "radioButton1");
-	            	Toast.makeText(this, "radioButton1", Toast.LENGTH_SHORT).show();
-	            	animalSelec = 1;
+	            	//Log.e("radio selected", "radioButton1");
+	            	//Toast.makeText(this, "radioButton1", Toast.LENGTH_SHORT).show();
+	            	animalSelec = "animal1";
 	            break;
 	        case R.id.radioButton2:
 	            if (checked)
-	            	Log.e("radio selected", "radioButton2");
-	            	animalSelec = 2;
+	            	//Log.e("radio selected", "radioButton2");
+	            	animalSelec = "animal2";
 	            break;
 	        case R.id.radioButton3:
 	        	if (checked)
-	        		animalSelec = 3;
+	        		animalSelec = "animal3";
 	        	break;
 	    }
 	    

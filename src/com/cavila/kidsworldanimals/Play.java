@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
@@ -15,14 +17,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 public class Play extends Activity implements OnInitListener {
-//create TextToSpeech native object
+
 private TextToSpeech tts;
 private Button btnSpell;
 private EditText textboxSpell;
 private Button btnDialog;
-private Button btnLearnMore;	
+private Button btnLearnMore;
+private Button btnVideo;
+VideoView vid;
 final Context context = this;
 public String currentAnimal = "cat";
 private String animalNameAnswer = "";
@@ -37,36 +42,56 @@ private String animalNameAnswer = "";
 
         //if(bundle.getInt("animal_selected")!= null)
         //{
-        	Log.e("animal selected was: ", Integer.toString(bundle.getInt("animal_selected")));
+      //ANIMAL SELECT WITH INTEGER	
+        //Log.e("animal selected was: ", Integer.toString(bundle.getInt("animal_selected")));
+        
+      //ANIMAL SELECT WITH STRING	
+        Log.e("animal selected was: ", bundle.getString("animal_selected"));
+        
+        Resources res = getResources(); 
+        String[] animArray = res.getStringArray(R.array.animal1);
+        Log.e("NAME", animArray[0]);
+        
+        // get resources according to selection  
+        	//get animal name
+        
         	//Log.e("animal selected was: ", bundle.getString("animal_selected"));
         	//R.array.animal1;
         	
         //}
         	//String currentAnimal = getResources().getIdentifier("animal1", "array","com.cavila.kidsworldanimals");
         	//Log.e("array resource is ", Integer.toString(bundle.getInt("animal_selected")));
-        	Toast.makeText(Play.this, getResources().getIdentifier("app_name", "string", 
-        			getPackageName()), Toast.LENGTH_LONG).show();
+// GET RESOURCES TEST        	
+//        	Toast.makeText(Play.this, getResources().getIdentifier("app_name", "string", 
+//        			getPackageName()), Toast.LENGTH_LONG).show();
 
-
-        	 
-        	
-        	
-		//Initialize the tts object
+	/**
+	 * video setup
+	 */
+        vid = (VideoView) findViewById(R.id.videoView1);
+        String uripath = "android.resource://" + getPackageName() + "/" + R.raw.bunny_video;
+        vid.setVideoURI(Uri.parse(uripath));
+    	btnVideo = (Button) findViewById(R.id.btnVideo);
+    	btnVideo.setOnClickListener(new View.OnClickListener() {
+    		@Override
+    		public void onClick(View v) {
+    			vid.setVisibility(View.VISIBLE);
+    			vid.start();
+    		}
+    	});
+        
 		tts = new TextToSpeech(this, this);
-		//Refer 'Speak' button
 		btnSpell = (Button) findViewById(R.id.btnSpell);
-		//Refer 'Text' control
 		textboxSpell = (EditText) findViewById(R.id.textboxSpell);
-		//Handle onClick event for button 'Speak'
 		btnSpell.setOnClickListener(new View.OnClickListener() {
-		
-				public void onClick(View arg0) {
-					speakOut();
-				}
-		
+			public void onClick(View arg0) {
+				speakOut();
+			}	
 		});		
 		
-    	// dialog button
+	/**
+	 *  dialog button
+	 */
     	btnDialog = (Button) findViewById(R.id.btnDialog);
     	// add dialog button listener
     	btnDialog.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +104,7 @@ private String animalNameAnswer = "";
 
 			TextView text = (TextView) dialog.findViewById(R.id.textDialog);
 			
-			//check there is an answer and if that answer is right
+			//check if there is an answer and if that answer is right
 			animalNameAnswer = textboxSpell.getText().toString();
 			if (animalNameAnswer != null && animalNameAnswer.length() != 0){
 				
@@ -92,11 +117,9 @@ private String animalNameAnswer = "";
 				text.setText("Hey, you need to write the animal name");
 			}
 				
-			
 
-			
-			//			ImageView image = (ImageView) dialog.findViewById(R.id.image);
-//			image.setImageResource(R.drawable.ic_launcher);
+			//ImageView image = (ImageView) dialog.findViewById(R.id.image);
+			//image.setImageResource(R.drawable.ic_launcher);
 
 			Button dialogButton = (Button) dialog.findViewById(R.id.btnDialogOk);
 			// if button is clicked, close the custom dialog
@@ -111,7 +134,9 @@ private String animalNameAnswer = "";
 		  }
 		});
     	
-    	// Learn More
+	/**
+	 * Learn More
+	 */    	
     	btnLearnMore = (Button) findViewById(R.id.btnLearnMore);
     	// start Learn More activity
     	btnLearnMore.setOnClickListener(new View.OnClickListener() {
@@ -131,29 +156,24 @@ private String animalNameAnswer = "";
 		}else{
 			return false;
 		}
-		
 	}
 	
-	// TextToSpeech related methods based on http://android.programmerguru.com/android-text-to-speech-example/
+	/**
+	 * TextToSpeech related methods based on http://android.programmerguru.com/android-text-to-speech-example/
+	 */
 	public void onInit(int status) {
-        //TTS is successfully initialized
         if (status == TextToSpeech.SUCCESS) {
-                       //Setting speech language
             int result = tts.setLanguage(Locale.US);
-           //If your device doesn't support language you set above
             if (result == TextToSpeech.LANG_MISSING_DATA
                     || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-            	//Cook simple toast message with message
                 Toast.makeText(this, "Language not supported", Toast.LENGTH_LONG).show();
                 Log.e("TTS", "Language is not supported");
             } 
-         //Enable the button - It was disabled in play.xml (Go back and Check it)
-                        else {
-                        	btnSpell.setEnabled(true);
+            else {
+            	btnSpell.setEnabled(true);
             }
-         //TTS is not initialized properly
         } else {
-                    Toast.makeText(this, "TTS Initilization Failed", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "TTS Initilization Failed", Toast.LENGTH_LONG).show();
             Log.e("TTS", "Initilization Failed");
         }
     }	
@@ -183,6 +203,4 @@ private String animalNameAnswer = "";
         super.onDestroy();
     }	
 	
-
-
 }
