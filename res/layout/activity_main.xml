@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:screenOrientation="portrait"
     tools:context=".MainActivity" >
 
     <TextView
@@ -24,33 +25,42 @@
         android:layout_height="wrap_content"
         android:checked="true"
         android:onClick="onRadioButtonClicked"
-        android:text="Cat" />
+        android:text="crocodile" />
     
 	<RadioButton
 	    android:id="@+id/radioButton2"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
         android:onClick="onRadioButtonClicked"
-	    android:text="Crocodile" />
+	    android:text="chimpanzee" />
 
 	<RadioButton
 	    android:id="@+id/radioButton3"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
         android:onClick="onRadioButtonClicked"
-	    android:text="RadioButton" />
+	    android:text="hippopotamus" />
 
 	<RadioButton
 	    android:id="@+id/radioButton4"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:text="RadioButton" />
+	    android:onClick="onRadioButtonClicked"
+	    android:text="snake" />
 
 	<RadioButton
 	    android:id="@+id/radioButton5"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:text="RadioButton" />
+	    android:onClick="onRadioButtonClicked"
+	    android:text="elephant" />
+    
+	<RadioButton
+	    android:id="@+id/radioButton6"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:onClick="onRadioButtonClicked"
+	    android:text="bonus animal" />
     
     </RadioGroup>
 

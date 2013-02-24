@@ -32,8 +32,6 @@ public String animalSelec = "";
 	    switch(view.getId()) {
 	        case R.id.radioButton1:
 	            if (checked)
-	            	//Log.e("radio selected", "radioButton1");
-	            	//Toast.makeText(this, "radioButton1", Toast.LENGTH_SHORT).show();
 	            	animalSelec = "animal1";
 	            break;
 	        case R.id.radioButton2:
@@ -44,6 +42,18 @@ public String animalSelec = "";
 	        case R.id.radioButton3:
 	        	if (checked)
 	        		animalSelec = "animal3";
+	        	break;
+	        case R.id.radioButton4:
+	        	if (checked)
+	        		animalSelec = "animal4";
+	        	break;
+	        case R.id.radioButton5:
+	        	if (checked)
+	        		animalSelec = "animal5";
+	        	break;
+	        case R.id.radioButton6:
+	        	if (checked)
+	        		animalSelec = "animal6";
 	        	break;
 	    }
 	    

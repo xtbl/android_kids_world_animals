@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp" >
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:screenOrientation="portrait" >
 
     <ImageView
         android:id="@+id/imageView1"
@@ -18,5 +20,5 @@
         android:textSize="@dimen/txt_size_big"
         android:textStyle="bold"
         android:typeface="serif" />
-
-</LinearLayout>
+    
+    </LinearLayout>

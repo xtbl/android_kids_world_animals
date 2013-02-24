@@ -11,8 +11,12 @@ public final class R {
     public static final class array {
         public static final int animal1=0x7f050001;
         public static final int animal2=0x7f050002;
+        public static final int animal3=0x7f050003;
+        public static final int animal4=0x7f050004;
+        public static final int animal5=0x7f050005;
+        public static final int animal6=0x7f050006;
         public static final int animal_test=0x7f050000;
-        public static final int cat=0x7f050003;
+        public static final int cat=0x7f050007;
     }
     public static final class attr {
     }
@@ -32,29 +36,38 @@ public final class R {
     public static final class drawable {
         public static final int animal1=0x7f020000;
         public static final int animal2=0x7f020001;
-        public static final int animal_ico=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
+        public static final int animal3=0x7f020002;
+        public static final int animal4=0x7f020003;
+        public static final int animal5=0x7f020004;
+        public static final int animal6=0x7f020005;
+        public static final int animal_ico=0x7f020006;
+        public static final int go_back_btn=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int jungle_ico=0x7f020009;
+        public static final int lion=0x7f02000a;
+        public static final int main_header=0x7f02000b;
     }
     public static final class id {
-        public static final int backImage=0x7f0b0007;
-        public static final int btnDialog=0x7f0b000e;
-        public static final int btnDialogOk=0x7f0b0009;
-        public static final int btnLearnMore=0x7f0b000f;
-        public static final int btnSpell=0x7f0b000c;
-        public static final int btnVideo=0x7f0b000b;
-        public static final int button5=0x7f0b0011;
-        public static final int imageView1=0x7f0b000a;
-        public static final int menu_settings=0x7f0b0012;
+        public static final int backImage=0x7f0b0009;
+        public static final int btnDialog=0x7f0b0010;
+        public static final int btnDialogOk=0x7f0b000b;
+        public static final int btnLearnMore=0x7f0b0011;
+        public static final int btnSpell=0x7f0b000e;
+        public static final int btnVideo=0x7f0b000d;
+        public static final int button5=0x7f0b0008;
+        public static final int imageView1=0x7f0b000c;
+        public static final int menu_settings=0x7f0b0013;
         public static final int radioButton1=0x7f0b0002;
         public static final int radioButton2=0x7f0b0003;
         public static final int radioButton3=0x7f0b0004;
         public static final int radioButton4=0x7f0b0005;
         public static final int radioButton5=0x7f0b0006;
+        public static final int radioButton6=0x7f0b0007;
         public static final int radioGroup=0x7f0b0001;
-        public static final int textDialog=0x7f0b0008;
+        public static final int textDialog=0x7f0b000a;
         public static final int textView1=0x7f0b0000;
-        public static final int textboxSpell=0x7f0b000d;
-        public static final int videoView1=0x7f0b0010;
+        public static final int textboxSpell=0x7f0b000f;
+        public static final int videoView1=0x7f0b0012;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -68,6 +81,11 @@ public final class R {
     }
     public static final class raw {
         public static final int animal1=0x7f040000;
+        public static final int animal2=0x7f040001;
+        public static final int animal3=0x7f040002;
+        public static final int animal4=0x7f040003;
+        public static final int animal5=0x7f040004;
+        public static final int animal6=0x7f040005;
     }
     public static final class string {
         public static final int app_name=0x7f070000;

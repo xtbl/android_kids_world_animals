@@ -45,12 +45,6 @@ public class Play extends Activity implements OnInitListener {
         Bundle bundle = getIntent().getExtras();
         currentAnimal = bundle.getString("animal_selected");        
         getAnimalInfo(currentAnimal);
-        Log.e("ANIMAL_NAME", getAnimalName());
-
-
-// GET RESOURCES TEST        	
-//        	Toast.makeText(Play.this, getResources().getIdentifier("app_name", "string", 
-//        			getPackageName()), Toast.LENGTH_LONG).show();
 
 	/**
 	 * video setup
@@ -104,10 +98,6 @@ public class Play extends Activity implements OnInitListener {
 				text.setText("Hey, you need to write the animal name");
 			}
 				
-
-			//ImageView image = (ImageView) dialog.findViewById(R.id.image);
-			//image.setImageResource(R.drawable.ic_launcher);
-
 			Button dialogButton = (Button) dialog.findViewById(R.id.btnDialogOk);
 			// if button is clicked, close the custom dialog
 			dialogButton.setOnClickListener(new View.OnClickListener() {
@@ -196,8 +186,6 @@ public class Play extends Activity implements OnInitListener {
     }	
 
 	private void speakOut() {
-       //Get the text typed
-       //String tmptext = textboxSpell.getText().toString();
 	   String tmptext = getAnimalName();
        String text = "";
        //divide characters to spell
@@ -219,6 +207,10 @@ public class Play extends Activity implements OnInitListener {
             tts.shutdown();
         }
         super.onDestroy();
-    }	
+    }
+	
+	public void goBack(View view) {
+		finish();
+	}
 	
 }

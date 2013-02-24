@@ -102,5 +102,9 @@ public class AnimalInfo extends ListActivity {
 		}
 
 	}
+	
+	public void goBack(View view) {
+		finish();
+	}
 
 }
