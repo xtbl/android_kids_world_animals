@@ -3,14 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/jungle_bkg"
     android:screenOrientation="portrait"
     android:visibility="visible" >
-
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goBack"
+        android:src="@drawable/go_back_btn" />
     <Button
         android:id="@+id/btnVideo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Animal video" />
+
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="220dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnSpell"
@@ -39,18 +53,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Learn more" />
-
-    <VideoView
-        android:id="@+id/videoView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="goBack"
-        android:text="GO BACK" />
 
 </LinearLayout>

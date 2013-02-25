@@ -30,7 +30,7 @@ public class AnimalInfo extends ListActivity {
 		
 		setListAdapter(new MyAdapter(this,
 				android.R.layout.simple_list_item_1, R.id.textView1,
-//TODO: get dynamic resource here animalx
+
 				getResources().getStringArray( getArrayResId(currentAnimal) )));
 	}
 
@@ -74,7 +74,6 @@ public class AnimalInfo extends ListActivity {
 			TextView tv = (TextView) row.findViewById(R.id.textView1);
 
 			tv.setText(items[position]);
-//TODO: get dynamic resource here animalx
 		
 			if (position == 0){
 				iv.setImageResource(getDrawableResId(currentAnimal));

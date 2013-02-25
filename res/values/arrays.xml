@@ -48,7 +48,7 @@
     <string-array name="animal6">
         <item name="first_letter">p</item>
         <item name="name">plesiosaurus</item>
-        <item name="age">Average age: 15</item>
+        <item name="age">Average age: 300</item>
         <item name="food">They eat fish</item>
         <item name="domestic">Wild</item>
         <item name="origin">Scotland</item>

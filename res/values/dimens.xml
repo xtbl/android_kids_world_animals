@@ -6,4 +6,5 @@
     <dimen name="txt_size_std">20dp</dimen>
     <dimen name="txt_size_big">30dp</dimen>
     <dimen name="list_img_size">80dp</dimen>
+    <dimen name="list_padding">90dp</dimen>
 </resources>

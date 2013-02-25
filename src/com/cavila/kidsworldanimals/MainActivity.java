@@ -1,26 +1,58 @@
+/**
+ * Kids World Jungle by 
+ * Cristobal Avila Due–as
+ * 
+ * 2013
+ */
+
 package com.cavila.kidsworldanimals;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 public String animalSelec = "";
+final Context context = this;
+private MediaPlayer soundWelcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+		// custom dialog
+		final Dialog dialogWelcome = new Dialog(context);
+		dialogWelcome.setContentView(R.layout.dialog_welcome);
+		dialogWelcome.setTitle("Welcome!");    
+        soundWelcome = MediaPlayer.create(MainActivity.this, R.raw.elephant);
+
+		Button btnDialogWelc = (Button) dialogWelcome.findViewById(R.id.btnDialogWelcOk);
+		// if button is clicked, close the custom dialog
+		btnDialogWelc.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dialogWelcome.dismiss();
+				soundWelcome.start();
+			}
+		});
+
+		dialogWelcome.show();       
+        
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }

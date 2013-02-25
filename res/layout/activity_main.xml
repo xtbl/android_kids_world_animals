@@ -4,7 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:screenOrientation="portrait"
+    android:background="@drawable/jungle_bkg"
     tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/welcome_home_header" />
 
     <TextView
         android:id="@+id/textView1"
@@ -14,10 +21,11 @@
         android:text="Choose an animal:" />
 
 	<RadioGroup
-	android:id="@+id/radioGroup"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:orientation="vertical" >
+	    android:id="@+id/radioGroup"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:paddingLeft="@dimen/list_padding" >
     
     <RadioButton
         android:id="@+id/radioButton1"

@@ -7,6 +7,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -32,6 +33,8 @@ public class Play extends Activity implements OnInitListener {
 	private String currentAnimal = "";
 	private String animalNameAnswer = "";
 	private String[] animArray;
+	private MediaPlayer soundOk;
+	private MediaPlayer soundWrong;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,20 +87,29 @@ public class Play extends Activity implements OnInitListener {
 			dialog.setTitle("Your score");
 
 			TextView text = (TextView) dialog.findViewById(R.id.textDialog);
-			
+
+			/**
+			 * play sounds
+			 */
+	        soundOk = MediaPlayer.create(Play.this, R.raw.applause);
+	        soundWrong = MediaPlayer.create(Play.this, R.raw.harmonica_try_again);
+
 			//check if there is an answer and if that answer is right
 			animalNameAnswer = textboxSpell.getText().toString();
 			if (animalNameAnswer != null && animalNameAnswer.length() != 0){
 				
 				if( answerIsCorrect(getAnimalName(), animalNameAnswer) ){
 					text.setText("Congratulations!");
+					soundOk.start();
 				}else{
 					text.setText("Please try again");
+					soundWrong.start();
 				}
 			}else{
 				text.setText("Hey, you need to write the animal name");
 			}
-				
+
+			
 			Button dialogButton = (Button) dialog.findViewById(R.id.btnDialogOk);
 			// if button is clicked, close the custom dialog
 			dialogButton.setOnClickListener(new View.OnClickListener() {

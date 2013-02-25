@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.cavila.kidsworldanimals.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +24,11 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name=".Play"></activity>
+            android:name=".Play"
+            android:screenOrientation="portrait" ></activity>
         <activity 
-            android:name=".AnimalInfo"></activity>
+            android:name=".AnimalInfo"
+            android:screenOrientation="portrait" ></activity>
     </application>
 
 </manifest>
