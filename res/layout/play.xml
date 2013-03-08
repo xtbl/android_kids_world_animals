@@ -37,7 +37,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/write_hint" >
+        android:gravity="center"
+        android:hint="@string/write_hint"
+        android:textColor="@color/txt_color"
+        android:textColorHint="#FFFFFF" >
 
         <requestFocus />
     </EditText>

@@ -76,10 +76,11 @@ public final class R {
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int animal=0x7f030001;
-        public static final int dialog_1=0x7f030002;
-        public static final int dialog_welcome=0x7f030003;
-        public static final int list_item=0x7f030004;
-        public static final int play=0x7f030005;
+        public static final int credits=0x7f030002;
+        public static final int dialog_1=0x7f030003;
+        public static final int dialog_welcome=0x7f030004;
+        public static final int list_item=0x7f030005;
+        public static final int play=0x7f030006;
     }
     public static final class menu {
         public static final int activity_main=0x7f0a0000;
@@ -92,8 +93,9 @@ public final class R {
         public static final int animal5=0x7f040004;
         public static final int animal6=0x7f040005;
         public static final int applause=0x7f040006;
-        public static final int elephant=0x7f040007;
-        public static final int harmonica_try_again=0x7f040008;
+        public static final int bunny_video=0x7f040007;
+        public static final int elephant=0x7f040008;
+        public static final int harmonica_try_again=0x7f040009;
     }
     public static final class string {
         public static final int app_name=0x7f070000;
