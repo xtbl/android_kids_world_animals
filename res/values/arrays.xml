@@ -3,55 +3,49 @@
     <string-array name="animal1">
         <item name="first_letter">c</item>
         <item name="name">crocodile</item>
-        <item name="age">Average age: 15</item>
-        <item name="food">They eat meat</item>
-        <item name="domestic">Wild</item>
-        <item name="origin">All the tropics</item>
-        <item name="sleep">10 hours of sleep per day</item>
+        <item name="age">Life expectancy: 50</item>
+        <item name="food">They eat: meat</item>
+        <item name="domestic">Is domestic: No</item>
+        <item name="origin">Can be found in: All the tropics</item>
     </string-array>
     <string-array name="animal2">
         <item name="first_letter">c</item>
         <item name="name">chimpanzee</item>
-        <item name="age">Average age: 15</item>
-        <item name="food">They eat fruits</item>
-        <item name="domestic">Wild</item>
-        <item name="origin">Africa</item>
-        <item name="sleep">7 hours of sleep per day</item>
+        <item name="age">Life expectancy: 50</item>
+        <item name="food">They eat: fruits and insects</item>
+        <item name="domestic">Is domestic: No</item>
+        <item name="origin">Can be found in: Africa</item>
     </string-array>
     <string-array name="animal3">
         <item name="first_letter">h</item>
         <item name="name">hippopotamus</item>
-        <item name="age">Average age: 15</item>
-        <item name="food">They eat plants</item>
-        <item name="domestic">Wild</item>
-        <item name="origin">Sub Saharan Africa</item>
-        <item name="sleep">12 hours of sleep per day</item>
+        <item name="age">Life expectancy: 45</item>
+        <item name="food">They eat: plants</item>
+        <item name="domestic">Is domestic: No</item>
+        <item name="origin">Can be found in: Sub Saharan Africa</item>
     </string-array>
     <string-array name="animal4">
         <item name="first_letter">s</item>
         <item name="name">snake</item>
-        <item name="age">Average age: 15</item>
-        <item name="food">They eat meat</item>
-        <item name="domestic">Wild</item>
-        <item name="origin">Egypt</item>
-        <item name="sleep">15 hours of sleep per day</item>
+        <item name="age">Life expectancy: 12</item>
+        <item name="food">They eat: meat</item>
+        <item name="domestic">Is domestic: No</item>
+        <item name="origin">Can be found in: Almost all the world</item>
     </string-array>
     <string-array name="animal5">
         <item name="first_letter">e</item>
         <item name="name">elephant</item>
-        <item name="age">Average age: 15</item>
-        <item name="food">They eat leafs</item>
-        <item name="domestic">Wild</item>
-        <item name="origin">Egypt</item>
-        <item name="sleep">6 hours of sleep per day</item>
+        <item name="age">Life expectancy: 70</item>
+        <item name="food">They eat: vegetation</item>
+        <item name="domestic">Is domestic: No</item>
+        <item name="origin">Can be found in: Africa/India</item>
     </string-array>
     <string-array name="animal6">
         <item name="first_letter">p</item>
         <item name="name">plesiosaurus</item>
-        <item name="age">Average age: 300</item>
-        <item name="food">They eat fish</item>
-        <item name="domestic">Wild</item>
-        <item name="origin">Scotland</item>
-        <item name="sleep">5 hours of sleep per day</item>
+        <item name="age">Life expectancy: 150</item>
+        <item name="food">They eat: fish</item>
+        <item name="domestic">Is domestic: No</item>
+        <item name="origin">Can be found in: Scotland?</item>
     </string-array>
 </resources>

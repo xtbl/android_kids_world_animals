@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/list_txt_margin_top"
         android:layout_marginRight="@dimen/list_txt_margin_top"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
         android:orientation="vertical" >
 
         <TextView
@@ -29,6 +29,8 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="sendEmail"
             android:background="@color/txt_bg_dark"
             android:text="@string/credit_author"
             android:textSize="25sp"
@@ -39,8 +41,21 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="sendEmail"
             android:background="@color/txt_bg_dark"
             android:text="@string/credit_email"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="sendEmail"
+            android:background="@color/txt_bg_dark"
+            android:textSize="10sp"
+            android:text="(click on my name to email me)"
             android:textColor="@color/txt_list_color"
             android:textStyle="bold" />
 
@@ -97,7 +112,7 @@
             android:layout_height="wrap_content"
             android:textSize="10sp"
             android:background="@color/txt_bg_dark"
-            android:text="No, the guy in the picture is not me..."
+            android:text="No, I'm not the guy in the picture..."
             android:textColor="@color/txt_list_color"
             android:textStyle="bold" />
     </LinearLayout>
