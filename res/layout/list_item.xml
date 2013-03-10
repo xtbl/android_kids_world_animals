@@ -17,10 +17,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/txt_size_std"
         android:layout_marginTop="@dimen/list_txt_margin_top"
+        android:background="@color/txt_bg"
         android:text="TextView"
-        android:textColor="@color/txt_color"
+        android:textColor="#FFFFFF"
         android:textSize="@dimen/txt_size_std"
         android:textStyle="bold"
-        android:typeface="serif" />
+        android:typeface="sans" />
     
     </LinearLayout>

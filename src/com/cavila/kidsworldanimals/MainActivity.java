@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 public String animalSelec = "";
 final Context context = this;
 private MediaPlayer soundWelcome;
-
+private Button btnCredits;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +47,20 @@ private MediaPlayer soundWelcome;
 		});
 
 		dialogWelcome.show();       
-        
+    	
+        /**
+    	 * Go to credits
+    	 */    	
+        	btnCredits = (Button) findViewById(R.id.btnCredits);
+        	// start Learn More activity
+        	btnCredits.setOnClickListener(new View.OnClickListener() {
+        		@Override
+        		public void onClick(View v) {
+        	    	Intent i = new Intent(MainActivity.this, Credits.class);
+        	    	startActivity(i);
+        		}
+        	}); 
+        	       
     }
 
     @Override
@@ -97,5 +110,5 @@ private MediaPlayer soundWelcome;
     	i.putExtra("animal_selected", animalSelec);
     	startActivity(i);
     }
-    
+       
 }

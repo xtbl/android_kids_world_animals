@@ -5,9 +5,22 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="write_hint">type the letters here :)</string>
+	<string name="credit_title_1">App Developer:</string>
+    <string name="credit_author">Cristobal Avila Dueñas</string>
+    <string name="credit_email">correodecristobal@gmail.com</string>
+	<string name="credit_title_2">Illustrations and pictures from:</string>
+    <string name="credit_images">http://www.vectorjungle.com/\nhttp://mesmerizethis.deviantart.com/
+        \nhttp://en.indonesian-stuff.com/</string>
+    <string name="credit_title_3">Videos:</string>
+    <string name="credit_videos">Youtube.com (Creative Commons)</string>
 
+    
+    
 	<color name="bg_color">#97d71f</color>
 	<color name="txt_color">#000000</color>
 	<color name="txt_highlight_color">#f9912f</color>
+	<color name="txt_bg">#8096d320</color>
+	<color name="txt_bg_dark">#80000000</color>
+	<color name="txt_list_color">#FFFFFF</color>
 	
 </resources>

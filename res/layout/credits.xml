@@ -2,7 +2,118 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    android:background="@drawable/orangutan"
+    android:scaleType="center"
     android:orientation="vertical" >
-    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_txt_margin_top"
+        android:layout_marginRight="@dimen/list_txt_margin_top"
+        android:layout_marginTop="250dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:background="@color/txt_bg"
+            android:text="@string/credit_title_1"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/txt_bg_dark"
+            android:text="@string/credit_author"
+            android:textSize="25sp"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/txt_bg_dark"
+            android:text="@string/credit_email"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/txt_bg"
+            android:text="@string/credit_title_2"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:background="@color/txt_bg_dark"
+            android:text="@string/credit_images"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/txt_bg"
+            android:text="@string/credit_title_3"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:background="@color/txt_bg_dark"
+            android:text="@string/credit_videos"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/txt_bg"
+            android:text="Note:"
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:background="@color/txt_bg_dark"
+            android:text="No, the guy in the picture is not me..."
+            android:textColor="@color/txt_list_color"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/list_txt_margin_left"
+        android:background="#96d320"
+        android:minWidth="150dp"
+        android:layout_marginTop="20dp"
+        android:onClick="goBack"
+        android:text="«Back"
+        android:textColor="@color/txt_list_color"
+        android:textStyle="bold" />
 
 </LinearLayout>

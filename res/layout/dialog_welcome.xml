@@ -2,8 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="#ffffff"
     android:gravity="center_horizontal"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/txt_size_std" >
 
     <ImageView
         android:id="@+id/imageView1"
@@ -13,8 +15,10 @@
 
      <Button
          android:id="@+id/btnDialogWelcOk"
-         android:layout_width="100px"
+         android:layout_width="200dp"
          android:layout_height="wrap_content"
+         android:background="#96d320"
+         android:textColor="#FFFFFF"
          android:text=" Ok " />
  
 </LinearLayout>

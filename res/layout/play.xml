@@ -13,11 +13,16 @@
         android:layout_height="wrap_content"
         android:onClick="goBack"
         android:src="@drawable/go_back_btn" />
+
     <Button
         android:id="@+id/btnVideo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Animal video" />
+        android:layout_marginBottom="@dimen/list_txt_margin_left"
+        android:background="@color/txt_bg"
+        android:text="Animal video"
+        android:textColor="@color/txt_list_color"
+        android:textStyle="bold" />
 
     <VideoView
         android:id="@+id/videoView1"
@@ -30,6 +35,10 @@
         android:id="@+id/btnSpell"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/txt_bg"
+        android:textStyle="bold"
+        android:textColor="@color/txt_list_color"
+        android:layout_marginBottom="@dimen/list_txt_margin_left"
         android:text="How do I spell it?" />
 
     <EditText
@@ -49,12 +58,20 @@
         android:id="@+id/btnDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/txt_bg"
+        android:textStyle="bold"
+        android:textColor="@color/txt_list_color"
+        android:layout_marginBottom="@dimen/list_txt_margin_left"
         android:text="Get my score!" />
 
     <Button
         android:id="@+id/btnLearnMore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/txt_bg"
+        android:textStyle="bold"
+        android:textColor="@color/txt_list_color"
+        android:layout_marginBottom="@dimen/list_txt_margin_left"
         android:text="Learn more" />
 
 </LinearLayout>

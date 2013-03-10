@@ -22,8 +22,11 @@ public final class R {
     }
     public static final class color {
         public static final int bg_color=0x7f080000;
+        public static final int txt_bg=0x7f080003;
+        public static final int txt_bg_dark=0x7f080004;
         public static final int txt_color=0x7f080001;
         public static final int txt_highlight_color=0x7f080002;
+        public static final int txt_list_color=0x7f080005;
     }
     public static final class dimen {
         public static final int list_img_size=0x7f060005;
@@ -45,22 +48,27 @@ public final class R {
         public static final int go_back_btn=0x7f020007;
         public static final int ic_launcher=0x7f020008;
         public static final int jungle_bkg=0x7f020009;
-        public static final int jungle_ico=0x7f02000a;
-        public static final int lion=0x7f02000b;
-        public static final int main_header=0x7f02000c;
-        public static final int welcome=0x7f02000d;
-        public static final int welcome_home_header=0x7f02000e;
+        public static final int jungle_bkg_welcome=0x7f02000a;
+        public static final int jungle_ico=0x7f02000b;
+        public static final int lion=0x7f02000c;
+        public static final int main_header=0x7f02000d;
+        public static final int orangutan=0x7f02000e;
+        public static final int welcome=0x7f02000f;
+        public static final int welcome_home_header=0x7f020010;
+        public static final int welcome_jungle=0x7f020011;
     }
     public static final class id {
-        public static final int backImage=0x7f0b0009;
-        public static final int btnDialog=0x7f0b0011;
-        public static final int btnDialogOk=0x7f0b000b;
-        public static final int btnDialogWelcOk=0x7f0b000c;
-        public static final int btnLearnMore=0x7f0b0012;
-        public static final int btnSpell=0x7f0b000f;
-        public static final int btnVideo=0x7f0b000d;
+        public static final int backImage=0x7f0b000a;
+        public static final int btnCredits=0x7f0b0009;
+        public static final int btnDialog=0x7f0b001a;
+        public static final int btnDialogOk=0x7f0b0014;
+        public static final int btnDialogWelcOk=0x7f0b0015;
+        public static final int btnGoBack=0x7f0b0012;
+        public static final int btnLearnMore=0x7f0b001b;
+        public static final int btnSpell=0x7f0b0018;
+        public static final int btnVideo=0x7f0b0016;
         public static final int imageView1=0x7f0b0000;
-        public static final int menu_settings=0x7f0b0013;
+        public static final int menu_settings=0x7f0b001c;
         public static final int radioButton1=0x7f0b0003;
         public static final int radioButton2=0x7f0b0004;
         public static final int radioButton3=0x7f0b0005;
@@ -68,10 +76,17 @@ public final class R {
         public static final int radioButton5=0x7f0b0007;
         public static final int radioButton6=0x7f0b0008;
         public static final int radioGroup=0x7f0b0002;
-        public static final int textDialog=0x7f0b000a;
+        public static final int textDialog=0x7f0b0013;
         public static final int textView1=0x7f0b0001;
-        public static final int textboxSpell=0x7f0b0010;
-        public static final int videoView1=0x7f0b000e;
+        public static final int textView2=0x7f0b000b;
+        public static final int textView3=0x7f0b000c;
+        public static final int textView4=0x7f0b000d;
+        public static final int textView5=0x7f0b000e;
+        public static final int textView6=0x7f0b000f;
+        public static final int textView7=0x7f0b0010;
+        public static final int textView8=0x7f0b0011;
+        public static final int textboxSpell=0x7f0b0019;
+        public static final int videoView1=0x7f0b0017;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -99,6 +114,13 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f070000;
+        public static final int credit_author=0x7f070005;
+        public static final int credit_email=0x7f070006;
+        public static final int credit_images=0x7f070008;
+        public static final int credit_title_1=0x7f070004;
+        public static final int credit_title_2=0x7f070007;
+        public static final int credit_title_3=0x7f070009;
+        public static final int credit_videos=0x7f07000a;
         public static final int hello_world=0x7f070001;
         public static final int menu_settings=0x7f070002;
         public static final int write_hint=0x7f070003;

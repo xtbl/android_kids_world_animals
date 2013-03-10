@@ -17,7 +17,11 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"        
+        android:background="@color/txt_bg"
+        android:textStyle="bold"
+        android:textColor="@color/txt_list_color"
+        android:textSize="20dp"
         android:text="Choose an animal:" />
 
 	<RadioGroup
@@ -33,6 +37,7 @@
         android:layout_height="wrap_content"
         android:checked="true"
         android:onClick="onRadioButtonClicked"
+        android:textStyle="bold"
         android:text="crocodile" />
     
 	<RadioButton
@@ -40,6 +45,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
         android:onClick="onRadioButtonClicked"
+        android:textStyle="bold"
 	    android:text="chimpanzee" />
 
 	<RadioButton
@@ -47,6 +53,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
         android:onClick="onRadioButtonClicked"
+        android:textStyle="bold"
 	    android:text="hippopotamus" />
 
 	<RadioButton
@@ -54,6 +61,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:onClick="onRadioButtonClicked"
+        android:textStyle="bold"
 	    android:text="snake" />
 
 	<RadioButton
@@ -61,6 +69,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:onClick="onRadioButtonClicked"
+        android:textStyle="bold"
 	    android:text="elephant" />
     
 	<RadioButton
@@ -68,8 +77,23 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:onClick="onRadioButtonClicked"
+        android:textStyle="bold"
 	    android:text="bonus animal" />
     
     </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCredits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/list_txt_margin_left"
+        android:layout_marginTop="50dp"
+        android:background="#96d320"
+        android:minWidth="150dp"
+        android:onClick="displayCredits"
+        android:text="Credits"
+        android:textColor="@color/txt_list_color"
+        android:textStyle="bold" />
 
 </LinearLayout>
